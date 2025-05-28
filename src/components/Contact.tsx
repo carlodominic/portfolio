@@ -40,7 +40,7 @@ export const Contact = () => {
               </svg>
             </div>
             <h3 className="font-medium text-gray-900 dark:text-white mb-2">Email</h3>
-            <p className="text-gray-600 dark:text-gray-300">hello@designer.com</p>
+            <p className="text-gray-600 dark:text-gray-300">s.carlodominic@gmail.com</p>
           </div>
 
           <div className="text-center">
@@ -61,7 +61,7 @@ export const Contact = () => {
               </svg>
             </div>
             <h3 className="font-medium text-gray-900 dark:text-white mb-2">Phone</h3>
-            <p className="text-gray-600 dark:text-gray-300">+1 (555) 123-4567</p>
+            <p className="text-gray-600 dark:text-gray-300">+63 975 109 7800</p>
           </div>
 
           <div className="text-center">
@@ -83,7 +83,7 @@ export const Contact = () => {
               </svg>
             </div>
             <h3 className="font-medium text-gray-900 dark:text-white mb-2">Location</h3>
-            <p className="text-gray-600 dark:text-gray-300">New York, NY</p>
+            <p className="text-gray-600 dark:text-gray-300">Cagayan de Oro City, Philippines</p>
           </div>
         </div>
         <Social links={socialLinks} />
