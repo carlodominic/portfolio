@@ -1,30 +1,96 @@
+import { useState, useRef, useEffect } from "react";
+
 export const Projects = () => {
   const projects = [
     {
-      title: "E-commerce Platform",
-      category: "Web Design",
-      description: "A modern e-commerce platform with intuitive user experience and clean design.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop"
+      title: "Deployed Soon",
+      category: "TBA",
+      description: "The user is currently creating the said project, please check back later.",
+      image: "/images/unavailable.jpg"
     },
     {
-      title: "Mobile App Design",
-      category: "UI/UX Design",
-      description: "A comprehensive mobile application design for a fitness tracking app.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop"
+      title: "Deployed Soon",
+      category: "TBA",
+      description: "The user is currently creating the said project, please check back later.",
+      image: "/images/unavailable.jpg"
     },
     {
-      title: "Brand Identity",
-      category: "Branding",
-      description: "Complete brand identity design for a sustainable fashion company.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop"
+      title: "Deployed Soon",
+      category: "TBA",
+      description: "The user is currently creating the said project, please check back later.",
+      image: "/images/unavailable.jpg"
     },
     {
-      title: "Dashboard Design",
-      category: "Web Design",
-      description: "Analytics dashboard with focus on data visualization and user experience.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=600&fit=crop"
+      title: "Deployed Soon",
+      category: "TBA",
+      description: "The user is currently creating the said project, please check back later.",
+      image: "/images/unavailable.jpg"
     }
+    
   ];
+
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [cardWidth, setCardWidth] = useState(320);
+  const [atStart, setAtStart] = useState(true);
+  const [atEnd, setAtEnd] = useState(false);
+
+  const containerRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const updateDimensions = () => {
+      if (cardRef.current) {
+        setCardWidth(cardRef.current.offsetWidth);
+      }
+      handleScroll();
+    };
+
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
+  const handleScroll = (e?: React.UIEvent<HTMLDivElement>) => {
+    const container = e?.currentTarget || containerRef.current;
+    if (!container) return;
+
+    const index = Math.round(container.scrollLeft / cardWidth);
+    const clampedIndex = Math.min(Math.max(index, 0), projects.length - 1);
+    setActiveIndex(clampedIndex);
+
+    setAtStart(container.scrollLeft === 0);
+    setAtEnd(
+      container.scrollLeft + container.clientWidth >= container.scrollWidth - 1
+    );
+  };
+
+  const scrollLeft = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({
+        left: -cardWidth,
+        behavior: "smooth"
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({
+        left: cardWidth,
+        behavior: "smooth"
+      });
+    }
+  };
+
+  const scrollToIndex = (index: number) => {
+    if (containerRef.current) {
+      containerRef.current.scrollTo({
+        left: cardWidth * index,
+        behavior: "smooth"
+      });
+      setActiveIndex(index);
+    }
+  };
 
   return (
     <section id="projects" className="py-20 px-6">
@@ -33,29 +99,75 @@ export const Projects = () => {
           <h2 className="text-4xl font-light text-gray-900 dark:text-white mb-6">Selected Work</h2>
           <div className="w-16 h-0.5 bg-gray-900 dark:bg-white mx-auto"></div>
         </div>
-        
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <div 
-              key={index} 
-              className="group cursor-pointer"
-            >
-              <div className="relative overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 mb-6">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300"></div>
+
+        <div className="relative">
+          <div
+            ref={containerRef}
+            className="flex overflow-x-auto gap-8 pb-4 px-2 scrollbar-hide"
+            onScroll={handleScroll}
+          >
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                ref={index === 0 ? cardRef : null}
+                className="flex-none w-80 sm:w-96 bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden group cursor-pointer"
+              >
+                <div className="relative overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300"></div>
+                </div>
+                <div className="p-6 space-y-2">
+                  <p className="text-sm text-gray-500 dark:text-gray-400 uppercase tracking-wider">{project.category}</p>
+                  <h3 className="text-xl font-light text-gray-900 dark:text-white group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{project.description}</p>
+                </div>
               </div>
-              <div className="space-y-2">
-                <p className="text-sm text-gray-500 dark:text-gray-400 uppercase tracking-wider">{project.category}</p>
-                <h3 className="text-xl font-light text-gray-900 dark:text-white group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{project.description}</p>
-              </div>
-            </div>
+            ))}
+          </div>
+
+          <button
+            onClick={scrollLeft}
+            className={`absolute top-1/2 left-0 -translate-y-1/2 z-10 p-3 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-lg hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 ${
+              atStart ? "opacity-0 pointer-events-none" : "opacity-100"
+            }`}
+            aria-label="Scroll left"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+          </button>
+
+          <button
+            onClick={scrollRight}
+            className={`absolute top-1/2 right-0 -translate-y-1/2 z-10 p-3 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-lg hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 ${
+              atEnd ? "opacity-0 pointer-events-none" : "opacity-100"
+            }`}
+            aria-label="Scroll right"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </button>
+        </div>
+
+        <div className="flex justify-center mt-6 gap-2">
+          {projects.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => scrollToIndex(index)}
+              className={`w-3 h-3 rounded-full transition-all ${
+                activeIndex === index
+                  ? "bg-gray-900 dark:bg-white scale-125"
+                  : "bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500"
+              }`}
+              aria-label={`Go to project ${index + 1}`}
+            />
           ))}
         </div>
       </div>
