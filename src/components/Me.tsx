@@ -18,7 +18,7 @@ export const Me = () => {
             <h3 className="text-3xl font-medium text-gray-900 dark:text-white mb-3">Carlo Dominic M. Suaybaguio</h3>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">Data Analyst & Web Developer</p>
             <p className="text-base text-gray-500 dark:text-gray-400 max-w-lg mx-auto leading-relaxed">
-              Passionate about creating beautiful, functional designs that make a difference in people's lives
+              Passionate on analyzing complex data and website designing that improves user experience and optimizes information access.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
