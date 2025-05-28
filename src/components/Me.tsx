@@ -2,7 +2,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 export const Me = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-6 bg-white dark:bg-gray-900">
+    <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-6 bg-white dark:bg-gray-900">
       <div className="max-w-4xl mx-auto text-center">
         <div className="animate-fade-in">
           <div className="mb-16">
@@ -32,7 +32,7 @@ export const Me = () => {
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="px-10 py-4 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-full hover:border-gray-900 dark:hover:border-white transition-all duration-300 hover:scale-105"
             >
-              Get In Touch
+              Contact Me
             </button>
           </div>
         </div>
