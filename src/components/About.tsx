@@ -11,19 +11,17 @@ export const About = () => {
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
             <h3 className="text-2xl font-light text-gray-900 dark:text-white mb-8">
-              Passionate about creating meaningful experiences
+              Passionate about analyzing complex data and designing websites.
             </h3>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-8 text-lg">
-              With over 5 years of experience in design, I specialize in creating 
-              digital products that are not only visually appealing but also 
-              functionally excellent. My approach combines aesthetic sensibility 
-              with user-centered design principles.
+              With over 4 years of experience in web designing, I focus on creating interfaces that 
+              are both visually compelling and usable.
+              My approach combines a good foundation in data analysis with user-friendly 
+              design principles to create experiences that are efficient.
             </p>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
-              I believe great design should be invisible – it should enhance the 
-              user's experience without drawing attention to itself. Every project 
-              is an opportunity to solve problems creatively and make people's 
-              lives a little bit better.
+              I believe great design serves clarity – it simplifies complexity and helps users find what they need easily. 
+              Every project is an opportunity to turn insights into solutions that improve how people interact with digital information.
             </p>
           </div>
           
