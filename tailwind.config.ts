@@ -104,5 +104,19 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+    require("tailwindcss-animate"),
+    function ({ addUtilities }: { addUtilities: Function }) {
+      const newUtilities = {
+        ".scrollbar-hide": {
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+          "scrollbar-width": "none",
+          "-ms-overflow-style": "none",
+        },
+      };
+      addUtilities(newUtilities, ["responsive", "hover"]);
+    },
+  ],
 } satisfies Config;
