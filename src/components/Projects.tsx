@@ -3,30 +3,33 @@ import { useState, useRef, useEffect } from "react";
 export const Projects = () => {
   const projects = [
     {
-      title: "Deployed Soon",
-      category: "TBA",
-      description: "The user is currently creating the said project, please check back later.",
-      image: "/images/unavailable.jpg"
+      title: "Sleezy Online Store",
+      category: "TypeScript | Node JS",
+      description: "Online store built with TypeScript and Node.js, featuring a modern design and responsive layout. Soon to have backend functionality.",
+      image: "/images/sleezy-store.png",
+      link: "https://sleezy-store.netlify.app/" 
     },
     {
       title: "Deployed Soon",
       category: "TBA",
       description: "The user is currently creating the said project, please check back later.",
-      image: "/images/unavailable.jpg"
+      image: "/images/unavailable.jpg",
+      link: "#" 
     },
     {
       title: "Deployed Soon",
       category: "TBA",
       description: "The user is currently creating the said project, please check back later.",
-      image: "/images/unavailable.jpg"
+      image: "/images/unavailable.jpg",
+      link: "#"
     },
     {
       title: "Deployed Soon",
       category: "TBA",
       description: "The user is currently creating the said project, please check back later.",
-      image: "/images/unavailable.jpg"
+      image: "/images/unavailable.jpg",
+      link: "#"
     }
-    
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -96,7 +99,7 @@ export const Projects = () => {
     <section id="projects" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-light text-gray-900 dark:text-white mb-6">Selected Work</h2>
+          <h2 className="text-4xl font-light text-gray-900 dark:text-white mb-6">Created Projects</h2>
           <div className="w-16 h-0.5 bg-gray-900 dark:bg-white mx-auto"></div>
         </div>
 
@@ -107,27 +110,34 @@ export const Projects = () => {
             onScroll={handleScroll}
           >
             {projects.map((project, index) => (
-              <div
+              <a
                 key={index}
-                ref={index === 0 ? cardRef : null}
-                className="flex-none w-80 sm:w-96 bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden group cursor-pointer"
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
               >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300"></div>
+                <div
+                  ref={index === 0 ? cardRef : null}
+                  className="flex-none w-80 sm:w-96 bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden group cursor-pointer"
+                >
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300"></div>
+                  </div>
+                  <div className="p-6 space-y-2">
+                    <p className="text-sm text-gray-500 dark:text-gray-400 uppercase tracking-wider">{project.category}</p>
+                    <h3 className="text-xl font-light text-gray-900 dark:text-white group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{project.description}</p>
+                  </div>
                 </div>
-                <div className="p-6 space-y-2">
-                  <p className="text-sm text-gray-500 dark:text-gray-400 uppercase tracking-wider">{project.category}</p>
-                  <h3 className="text-xl font-light text-gray-900 dark:text-white group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{project.description}</p>
-                </div>
-              </div>
+              </a>
             ))}
           </div>
 
