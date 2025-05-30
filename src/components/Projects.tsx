@@ -3,18 +3,18 @@ import { useState, useRef, useEffect } from "react";
 export const Projects = () => {
   const projects = [
     {
+      title: "UnheardThoughts Blog Site",
+      category: "Next JS | Supabase",
+      description: "Built with Next.js and Supabase, it empowers creators to share unspoken stories and connect through emotionally resonant content.",
+      image: "/images/unheard-thoughts.png",
+      link: "https://unheard-thoughts.netlify.app/" 
+    },
+    {
       title: "Sleezy Online Store",
       category: "TypeScript | Node JS",
       description: "Online store built with TypeScript and Node.js, featuring a modern design and responsive layout. Soon to have backend functionality.",
       image: "/images/sleezy-store.png",
       link: "https://sleezy-store.netlify.app/" 
-    },
-    {
-      title: "Deployed Soon",
-      category: "TBA",
-      description: "The user is currently creating the said project, please check back later.",
-      image: "/images/unavailable.jpg",
-      link: "#" 
     },
     {
       title: "Deployed Soon",
