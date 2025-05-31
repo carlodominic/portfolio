@@ -10,6 +10,13 @@ export const Projects = () => {
       link: "https://unheard-thoughts.netlify.app/" 
     },
     {
+      title: "Market Tracker",
+      category: "React JS | Tailwind",
+      description: "Online market tracker application that allows users to track market trends and prices with responsive layout.",
+      image: "/images/market-tracker.png",
+      link: "https://market-tracker-carlo.netlify.app/"
+    },
+    {
       title: "InvestVision",
       category: "Vite JS",
       description: "Landing page template for investor created through a request seen in public posts with modern design and responsive layout.",
@@ -23,13 +30,6 @@ export const Projects = () => {
       image: "/images/sleezy-store.png",
       link: "https://sleezy-store.netlify.app/" 
     },
-    {
-      title: "Deployed Soon",
-      category: "TBA",
-      description: "The user is currently creating the said project, please check back later.",
-      image: "/images/unavailable.jpg",
-      link: "#"
-    }
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
