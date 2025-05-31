@@ -10,18 +10,18 @@ export const Projects = () => {
       link: "https://unheard-thoughts.netlify.app/" 
     },
     {
+      title: "InvestVision",
+      category: "Vite JS",
+      description: "Landing page template for investor created through a request seen in public posts with modern design and responsive layout.",
+      image: "/images/investment_landing_page.png",
+      link: "https://investor-page.netlify.app/"
+    },
+    {
       title: "Sleezy Online Store",
       category: "TypeScript | Node JS",
       description: "Online store built with TypeScript and Node.js, featuring a modern design and responsive layout. Soon to have backend functionality.",
       image: "/images/sleezy-store.png",
       link: "https://sleezy-store.netlify.app/" 
-    },
-    {
-      title: "Deployed Soon",
-      category: "TBA",
-      description: "The user is currently creating the said project, please check back later.",
-      image: "/images/unavailable.jpg",
-      link: "#"
     },
     {
       title: "Deployed Soon",
