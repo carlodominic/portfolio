@@ -20,7 +20,7 @@ export const About = () => {
               design principles to create experiences that are efficient.
             </p>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
-              I believe great design serves clarity – it simplifies complexity and helps users find what they need easily. 
+              I believe great design serves clarity as it simplifies complexity and helps users find what they need easily. 
               Every project is an opportunity to turn insights into solutions that improve how people interact with digital information.
             </p>
           </div>
