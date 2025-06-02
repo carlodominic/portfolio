@@ -170,13 +170,6 @@ export const Projects = () => {
       link: "https://unheard-thoughts.netlify.app/"
     },
     {
-      title: "Market Tracker",
-      category: "React JS | Tailwind",
-      description: "Online market tracker application that allows users to track market trends and prices with responsive layout.",
-      image: "/images/market-tracker.png",
-      link: "https://market-tracker-carlo.netlify.app/"
-    },
-    {
       title: "InvestVision",
       category: "Vite JS",
       description: "Landing page template for investor created through a request seen in public posts with modern design and responsive layout.",
@@ -190,9 +183,6 @@ export const Projects = () => {
       image: "/images/sleezy-store.png",
       link: "https://sleezy-store.netlify.app/"
     },
-  ];
-
-  const dataProjects: Project[] = [
     {
       title: "Deployed Soon",
       category: "TBA",
@@ -200,12 +190,22 @@ export const Projects = () => {
       image: "/images/unavailable.jpg",
       link: "#"
     },
-        {
-      title: "Deployed Soon",
-      category: "TBA",
-      description: "The user is currently creating the said project, please check back later.",
-      image: "/images/unavailable.jpg",
-      link: "#"
+  ];
+
+  const dataProjects: Project[] = [
+    {
+      title: "Covid-19 Dashboard",
+      category: "",
+      description: "A dashboard that provides real-time data and visualizations of the Covid-19 pandemic, including cases, recoveries, and deaths.",
+      image: "/images/covid19-dashboard.png",
+      link: "https://covid-dashboard-cdms.netlify.app/"
+    },
+    {
+      title: "Market Tracker",
+      category: "",
+      description: "Online market tracker application that allows users to track market trends and prices with responsive layout.",
+      image: "/images/market-tracker.png",
+      link: "https://market-tracker-carlo.netlify.app/"
     },
         {
       title: "Deployed Soon",
