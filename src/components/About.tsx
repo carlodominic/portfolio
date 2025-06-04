@@ -30,7 +30,7 @@ export const About = () => {
               {[
                 { label: "Projects Created", value: "5" },
                 { label: "Years of Experience", value: "4" },
-                { label: "Certifications", value: "2" },
+                { label: "Certifications", value: "3" },
                 { label: "Clients", value: "0" }
               ].map((stat, index) => (
                 <div key={index} className="flex justify-between items-center border-b border-gray-100 dark:border-gray-600 pb-4 last:border-b-0">

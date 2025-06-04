@@ -3,15 +3,6 @@ import { useState, useRef, useEffect } from "react";
 export const Certifications = () => {
   const certifications = [
     {
-      title: "Get Certified as an Excel Pro! - Microsoft Essentials",
-      issuer: "Microsoft",
-      date: "2025",
-      description: "",
-      image: "images/essentials_excel.png",
-      credentialUrl: "https://drive.google.com/file/d/1MDRfV00ghivE-UeMmOF1DbOYrBj_zS4B/view?usp=sharing",
-      status: "Visible"
-    },
-    {
       title: "Excel Mastery Certificate: Beyond The Basics",
       issuer: "Excel Academy",
       date: "2025",
@@ -21,12 +12,21 @@ export const Certifications = () => {
       status: "Visible"
     },
     {
-      title: "The user is currently working on this certification.",
-      issuer: "TBA",
+      title: "Get Certified as an Excel Pro! - Microsoft Essentials",
+      issuer: "Microsoft",
       date: "2025",
       description: "",
-      image: "images/currently_working.jpg",
-      credentialUrl: "#",
+      image: "images/essentials_excel.png",
+      credentialUrl: "https://drive.google.com/file/d/1MDRfV00ghivE-UeMmOF1DbOYrBj_zS4B/view?usp=sharing",
+      status: "Visible"
+    },
+    {
+      title: "Certification of Completion: On-the-Job Training (OJT)",
+      issuer: "Commission on Audit - Region 10",
+      date: "2025",
+      description: "",
+      image: "images/coa_certification.jpg",
+      credentialUrl: "https://drive.google.com/file/d/1_pQfl3qGQcrTK5djPmSOyLY_JoRBUfS7/view?usp=sharing",
       status: "Visible"
     },
     {
