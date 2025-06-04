@@ -40,7 +40,7 @@ export const Navigation = () => {
       <div className="max-w-6xl mx-auto px-6 py-5">
         <div className="relative flex justify-between items-center">
           <div className="hidden md:flex w-full justify-center items-center gap-6 md:gap-8">
-            {["Home", "About", "Projects", "Services", "Contact"].map((item) => (
+            {["Home", "About", "Projects", "Services", "Certifications", "Contact"].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
@@ -91,7 +91,7 @@ export const Navigation = () => {
           }`}
         >
           <div className="flex flex-col items-center gap-6 px-6">
-            {["Home", "About", "Projects", "Services", "Contact"].map((item) => (
+            {["Home", "About", "Projects", "Services", "Certifications", "Contact"].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}

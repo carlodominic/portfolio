@@ -28,7 +28,7 @@ export const About = () => {
           <div className="bg-white dark:bg-gray-700 rounded-2xl p-10 shadow-lg dark:shadow-gray-900/20">
             <div className="space-y-8">
               {[
-                { label: "Projects Created", value: "4" },
+                { label: "Projects Created", value: "5" },
                 { label: "Years of Experience", value: "4" },
                 { label: "Certifications", value: "2" },
                 { label: "Clients", value: "0" }

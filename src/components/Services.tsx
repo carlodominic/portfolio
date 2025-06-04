@@ -3,11 +3,11 @@ export const Services = () => {
     { name: "JavaScript", level: 95 },
     { name: "TypeScript", level: 90 },
     { name: "Python", level: 85 },
-    { name: "PHP", level: 88 }
+    { name: "PHP", level: 50 }
   ];
 
   const analyst = [
-    "Data Processing", "Data Cleaning", "Data Analysis", "Data Entry", "Database Management", "Data Validation"
+    "Data Processing", "Data Cleaning", "Data Analysis", "Data Entry", "DB Management", "Data Validation"
   ];
 
   return (
@@ -20,7 +20,7 @@ export const Services = () => {
         
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-light text-gray-900 dark:text-white mb-8">Languages Used</h3>
+            <h3 className="text-2xl font-light text-gray-900 dark:text-white mb-8">Programming Languages</h3>
             <div className="space-y-6">
               {services.map((services, index) => (
                 <div key={index}>
@@ -40,7 +40,7 @@ export const Services = () => {
           </div>
           
           <div>
-            <h3 className="text-2xl font-light text-gray-900 dark:text-white mb-8">Data Related Service</h3>
+            <h3 className="text-2xl font-light text-gray-900 dark:text-white mb-8">Data Services</h3>
             <div className="grid grid-cols-2 gap-4">
               {analyst.map((tool, index) => (
                 <div 

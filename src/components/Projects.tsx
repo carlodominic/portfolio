@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 
-// Define Project interface for type safety
 interface Project {
   title: string;
   category: string;
@@ -9,9 +8,7 @@ interface Project {
   link: string;
 }
 
-// Reusable ProjectSection component
 const ProjectSection = ({ projects }: { projects: Project[] }) => {
-  // Display message if no projects exist
   if (projects.length === 0) {
     return <p className="text-center text-gray-500 dark:text-gray-400">No projects in this category yet.</p>;
   }

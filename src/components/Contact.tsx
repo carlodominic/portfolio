@@ -9,7 +9,7 @@ export const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-6">
+    <section id="contact" className="py-20 px-6 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
       <div className="max-w-4xl mx-auto text-center">
         <div className="mb-16">
           <h2 className="text-4xl font-light text-gray-900 dark:text-white mb-6">Let's Work Together</h2>
