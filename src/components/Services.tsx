@@ -7,7 +7,7 @@ export const Services = () => {
   ];
 
   const analyst = [
-    "Data Processing", "Data Cleaning", "Data Analysis", "Data Entry", "DB Management", "Data Validation"
+    "Data Processing", "Data Cleaning", "Data Analysis", "Data Entry", "DB Management", "Data Visualization"
   ];
 
   return (

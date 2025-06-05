@@ -191,27 +191,34 @@ export const Projects = () => {
 
   const dataProjects: Project[] = [
     {
+      title: "AirBnB 2016 Price",
+      category: "Tableau",
+      description: "A Tableau dashboard visualizing AirBnB rental prices in 2016, showcasing trends and insights from the dataset.",
+      image: "/images/tableau_first.png",
+      link: "https://public.tableau.com/app/profile/carlo.dominic.suaybaguio/viz/TableauFirstProject_17491122106670/Dashboard1?publish=yes"
+    },
+    {
       title: "Covid-19 Dashboard",
-      category: "",
+      category: "JavaScript",
       description: "A dashboard that provides real-time data and visualizations of the Covid-19 pandemic, including cases, recoveries, and deaths.",
       image: "/images/covid19-dashboard.png",
       link: "https://covid-dashboard-cdms.netlify.app/"
     },
     {
       title: "Market Tracker",
-      category: "",
+      category: "JavaScript",
       description: "Online market tracker application that allows users to track market trends and prices with responsive layout.",
       image: "/images/market-tracker.png",
       link: "https://market-tracker-carlo.netlify.app/"
     },
-        {
+    {
       title: "Deployed Soon",
       category: "TBA",
       description: "The user is currently creating the said project, please check back later.",
       image: "/images/unavailable.jpg",
       link: "#"
     },
-        {
+    {
       title: "Deployed Soon",
       category: "TBA",
       description: "The user is currently creating the said project, please check back later.",
