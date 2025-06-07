@@ -191,6 +191,13 @@ export const Projects = () => {
 
   const dataProjects: Project[] = [
     {
+      title: "British Airways Reviews",
+      category: "Tableau",
+      description: "A Tableau dashboard analyzing British Airways reviews, providing insights into customer satisfaction and service quality.",
+      image: "/images/tableau_second.png",
+      link: "https://public.tableau.com/app/profile/carlo.dominic.suaybaguio/viz/BritishAirwaysVisualizationPractice/Dashboard1?publish=yes"
+    },
+    {
       title: "AirBnB 2016 Price",
       category: "Tableau",
       description: "A Tableau dashboard visualizing AirBnB rental prices in 2016, showcasing trends and insights from the dataset.",
