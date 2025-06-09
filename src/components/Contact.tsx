@@ -2,7 +2,7 @@ import { Social } from "@/components/Social";
 
 export const Contact = () => {
   const socialLinks = [
-    { name: "LinkedIn", url: "https://linkedin.com/in/yourprofile" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/carlo-dominic-suaybaguio-70565b369/" },
     { name: "Upwork", url: "https://www.upwork.com/freelancers/~0162a72ba087bb3bfc" },
     { name: "OnlineJobsPH", url: "https://www.onlinejobs.ph/jobseekers/info/2062983" },
     { name: "Instagram", url: "https://www.instagram.com/carlosamaaa/" },
