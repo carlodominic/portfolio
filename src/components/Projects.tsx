@@ -160,6 +160,13 @@ const ProjectSection = ({ projects }: { projects: Project[] }) => {
 export const Projects = () => {
   const webProjects: Project[] = [
     {
+      title: "PRD Generator",
+      category: "Vite JS | TypeScript",
+      description: "Generates Product Requirement Documents using TypeScript which gives structured format for product development.",
+      image: "/images/prd-generator.jpeg",
+      link: "https://prd-generator-carlo.netlify.app/"
+    },
+    {
       title: "UnheardThoughts Blog Site",
       category: "Next JS | Supabase",
       description: "Built with Next.js and Supabase, it empowers creators to share unspoken stories and connect through emotionally resonant content.",
@@ -179,6 +186,13 @@ export const Projects = () => {
       description: "Online store built with TypeScript and Node.js, featuring a modern design and responsive layout. Soon to have backend functionality.",
       image: "/images/sleezy-store.png",
       link: "https://sleezy-store.netlify.app/"
+    },
+    {
+      title: "ShopNow Online Store",
+      category: "TypeScript | Node JS",
+      description: "Online store built with TypeScript and Node.js, featuring a modern design and responsive layout. Soon to have backend functionality.",
+      image: "/images/ads-e-commerce.png",
+      link: "https://ads-e-commerce.netlify.app/"
     },
     {
       title: "Deployed Soon",
